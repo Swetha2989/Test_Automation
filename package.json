@@ -1,0 +1,25 @@
+{
+  "name": "interview_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "ui_test": "MOCHA_FILE=test-results/ui.xml npx mocha tests/login_AddToCart.spec.js --reporter mocha-junit-reporter",
+    "api_test": "MOCHA_FILE=test-results/api.xml npx mocha tests/aws_APIGateway.js --reporter mocha-junit-reporter --timeout=1000",
+    "s3_test": "MOCHA_FILE=test-results/s3Bucket.xml npx mocha tests/aws_s3Bucket.js --reporter mocha-junit-reporter --timeout=1000"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.188.0",
+    "playwright": "^1.27.1",
+    "axios": "^1.1.2",
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.3",
+    "mocha": "^10.0.0",
+    "mocha-junit-reporter": "^2.1.0"
+  }
+}
